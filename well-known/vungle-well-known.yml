@@ -1,0 +1,16 @@
+generated: '2026-07-21'
+method: searched
+source: live probes of vungle.com and liftoff.io
+note: >-
+  Probed the /.well-known/ discovery surface for the Vungle (vungle.com) and Liftoff
+  (liftoff.io) hosts. No well-known documents were served (all 404). No security.txt,
+  OIDC configuration, or api-catalog is published.
+hosts:
+  - host: https://vungle.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+  - host: https://liftoff.io
+    documents:
+      - path: /.well-known/security.txt
+        status: 404

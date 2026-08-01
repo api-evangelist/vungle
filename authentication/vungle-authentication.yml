@@ -1,0 +1,39 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.liftoff.io/advertiser/reporting_api
+docs: https://docs.liftoff.io/
+note: >-
+  Vungle is operated by Liftoff (the Liftoff + Vungle mobile growth and monetization
+  platform). The programmatic API surface is documented at docs.liftoff.io. Every
+  Vungle/Liftoff advertiser API uses HTTP Basic authentication with a Liftoff-issued
+  API key + API secret (obtained from your Account Manager). There is no OAuth 2.0,
+  OpenID Connect, or scope model.
+summary:
+  types: [http]
+  http_schemes: [basic]
+  credential: API Key + API Secret (issued by Liftoff Account Manager)
+  oauth2_flows: []
+  api_key_in: []
+schemes:
+  - name: basicAuth
+    type: http
+    scheme: basic
+    description: >-
+      HTTP Basic auth. The username is the Liftoff API Key and the password is the
+      Liftoff API Secret, sent as an Authorization header of the form
+      `Authorization: Basic base64(ApiKey:ApiSecret)`.
+      curl example: `curl --user 'API_KEY:API_SECRET' --url https://data.liftoff.io/api/v1/apps`
+    applies_to:
+      - Reporting API (https://data.liftoff.io/api/v1)
+      - Campaign Management API (https://cm-api.liftoff.io/v1)
+      - Audiences Integration API (https://analytics.liftoff.io/audiences/v1)
+      - GDPR Opt-Out API (https://analytics.liftoff.io/opt_out/v3)
+    sources:
+      - https://docs.liftoff.io/advertiser/reporting_api
+      - https://docs.liftoff.io/advertiser/campaign_management_api
+      - https://docs.liftoff.io/advertiser/direct/liftoff-api-audiences
+      - https://docs.liftoff.io/advertiser/direct/liftoff-gdpr-opt-out-api
+credential_provisioning: >-
+  API Key and API Secret are provisioned out-of-band: advertisers contact their
+  Liftoff Account Manager, who emails the key/secret pair. The Audiences Integration
+  API additionally issues partner-level credentials via a separate channel.

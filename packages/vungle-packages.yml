@@ -1,0 +1,30 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.liftoff.io/liftoff_creatives
+note: >-
+  First-party Vungle / Liftoff Monetize client SDKs for mobile app publishers and
+  advertisers. These are the Vungle ad SDKs distributed under the com.vungle
+  namespace and the VungleAds pod. Registry presence verified live (HTTP 200).
+packages:
+  - language: swift-objc
+    registry: cocoapods
+    name: VungleAds
+    url: https://cocoapods.org/pods/VungleAds
+    install: pod 'VungleAds'
+    platform: iOS
+    official: true
+  - language: java-kotlin
+    registry: maven-central
+    name: com.vungle:vungle-ads
+    url: https://central.sonatype.com/artifact/com.vungle/vungle-ads
+    install: "implementation 'com.vungle:vungle-ads:+'"
+    platform: Android
+    official: true
+verified:
+  - {url: https://cocoapods.org/pods/VungleAds, status: 200}
+  - {url: https://repo1.maven.org/maven2/com/vungle/vungle-ads/, status: 200}
+  - {url: https://central.sonatype.com/artifact/com.vungle/vungle-ads, status: 200}
+sources:
+  - https://docs.liftoff.io/liftoff_creatives
+  - https://cocoapods.org/pods/VungleAds
+  - https://central.sonatype.com/artifact/com.vungle/vungle-ads

@@ -1,8 +1,16 @@
 aid: vungle
 name: Vungle
-description: Vungle is a company surfaced as a portfolio company of 500-global, gv, uncork-capital and
-  added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment
-  pipeline.
+description: >-
+  Vungle is a mobile app monetization and user-acquisition platform, now operated as
+  part of Liftoff (the merged Liftoff + Vungle mobile growth company). Vungle's in-app
+  advertising SDKs help mobile publishers monetize with performance-focused ad formats
+  (video, interactive, and playable ads), while Liftoff's advertiser APIs let growth
+  teams launch and manage user-acquisition campaigns, assemble creatives, ingest
+  audiences, and pull automated performance reporting. The programmatic surface is
+  documented at docs.liftoff.io and includes a Reporting API, a closed-beta Campaign
+  Management API, an Audiences Integration API, a GDPR Opt-Out API, and a
+  server-to-server (S2S) postback integration. All advertiser APIs authenticate with
+  an HTTP Basic API key and secret issued by a Liftoff Account Manager.
 url: https://raw.githubusercontent.com/api-evangelist/vungle/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -12,17 +20,125 @@ x-backed-by:
 - uncork-capital
 x-tier: stub
 x-tier-reason: portfolio-lead
+x-operated-by: Liftoff
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 14
+  pass: local-v1
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://liftoff.ai/wp-content/uploads/2025/01/B-Meta-Image-20240912-122239.jpg
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
-apis: []
+- Advertising
+- Mobile
+- Monetization
+- User Acquisition
+- Ad Tech
+- Analytics
+- Reporting
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+apis:
+- name: Liftoff Reporting API
+  description: >-
+    Automated access to Vungle/Liftoff campaign performance reports — impressions,
+    clicks, installs, and in-app events — with configurable groupings, metrics, and
+    cohort (look-back window) analysis. HTTP Basic authenticated; JSON.
+  humanURL: https://docs.liftoff.io/advertiser/reporting_api
+  baseURL: https://data.liftoff.io/api/v1
+  properties:
+  - type: Documentation
+    url: https://docs.liftoff.io/advertiser/reporting_api
+  - type: Authentication
+    url: authentication/vungle-authentication.yml
+- name: Liftoff Campaign Management API
+  description: >-
+    Closed-beta API to programmatically launch UA expansion campaigns, manage spend
+    and targeting, upload assets, and assemble creatives. Standard REST/JSON at
+    https://cm-api.liftoff.io/v1.
+  humanURL: https://docs.liftoff.io/advertiser/campaign_management_api
+  baseURL: https://cm-api.liftoff.io/v1
+  properties:
+  - type: Documentation
+    url: https://docs.liftoff.io/advertiser/campaign_management_api
+- name: Liftoff Audiences Integration API
+  description: >-
+    Audience ingestion/validation API for partners working on behalf of multiple
+    clients, at https://analytics.liftoff.io/audiences/v1.
+  humanURL: https://docs.liftoff.io/advertiser/direct/liftoff-api-audiences
+  baseURL: https://analytics.liftoff.io/audiences/v1
+  properties:
+  - type: Documentation
+    url: https://docs.liftoff.io/advertiser/direct/liftoff-api-audiences
+- name: Liftoff GDPR Opt-Out API
+  description: >-
+    Submit GDPR-compliant opt-out requests to remove user data by device ID, at
+    https://analytics.liftoff.io/opt_out/v3.
+  humanURL: https://docs.liftoff.io/advertiser/direct/liftoff-gdpr-opt-out-api
+  baseURL: https://analytics.liftoff.io/opt_out/v3
+  properties:
+  - type: Documentation
+    url: https://docs.liftoff.io/advertiser/direct/liftoff-gdpr-opt-out-api
 common:
+- type: DomainSecurity
+  url: security/vungle-domain-security.yml
 - type: Website
   url: https://vungle.com
+- type: DeveloperPortal
+  url: https://docs.liftoff.io/
+- type: Documentation
+  url: https://docs.liftoff.io/
+- type: GettingStarted
+  url: https://docs.liftoff.io/advertiser
+- type: Authentication
+  url: authentication/vungle-authentication.yml
+- type: Conventions
+  url: conventions/vungle-conventions.yml
+- type: ErrorCatalog
+  url: errors/vungle-error-codes.yml
+- type: RateLimits
+  url: rate-limits/vungle-rate-limits.yml
+- type: Lifecycle
+  url: lifecycle/vungle-lifecycle.yml
+- type: Sandbox
+  url: sandbox/vungle-sandbox.yml
+- type: Packages
+  url: packages/vungle-packages.yml
+- type: SDKs
+  url: packages/vungle-packages.yml
+- type: MCPServer
+  url: mcp/vungle-mcp.yml
+- type: LLMsTxt
+  url: llms/vungle-llms.txt
+- type: Conformance
+  url: conformance/vungle-conformance.yml
+- type: DataModel
+  url: data-model/vungle-data-model.yml
+- type: Webhooks
+  url: asyncapi/vungle-s2s-webhooks.yml
+- type: Blog
+  url: https://liftoff.io/blog
+- type: PrivacyPolicy
+  url: https://liftoff.io/privacy-policy
+- type: TermsOfService
+  url: https://liftoff.io/terms-of-service
+- type: GitHubOrganization
+  url: https://github.com/Vungle

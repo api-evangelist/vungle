@@ -1,0 +1,63 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.liftoff.io/
+docs: https://docs.liftoff.io/advertiser/campaign_management_api
+note: >-
+  Cross-cutting request/response semantics for the Vungle/Liftoff advertiser APIs,
+  captured from the public Liftoff developer documentation. Vungle is operated by
+  Liftoff and its programmatic surface is branded Liftoff.
+authentication:
+  style: HTTP Basic
+  detail: >-
+    Authorization: Basic base64(ApiKey:ApiSecret). API Key + Secret issued by a
+    Liftoff Account Manager. See authentication/vungle-authentication.yml.
+transport:
+  protocol: REST over HTTPS
+  media_type: application/json
+  detail: >-
+    Standard REST patterns; requests and responses are JSON. Campaign Management API
+    base URL is https://cm-api.liftoff.io/v1; Reporting API base URL is
+    https://data.liftoff.io/api/v1.
+versioning:
+  style: uri-path
+  detail: >-
+    Version is carried in the URL path. Reporting and Campaign Management APIs are on
+    v1; the GDPR Opt-Out API is on v3 (opt_out/v3); the Audiences API is on v1.
+  current:
+    reporting: v1
+    campaign_management: v1
+    audiences: v1
+    gdpr_opt_out: v3
+test_mode:
+  supported: true
+  detail: >-
+    The Reporting API accepts a `test=true` query parameter on report creation to
+    validate a report request without consuming rate limit. The GDPR Opt-Out API
+    accepts a required `test` boolean in the JSON body. See sandbox/vungle-sandbox.yml.
+rate_limiting:
+  documented: true
+  detail: >-
+    The Campaign Management API documents 1,000 requests per minute per REST method
+    plus resource quotas. The Reporting API recommends validating with test=true to
+    avoid hitting rate limits. See rate-limits/vungle-rate-limits.yml.
+error_handling:
+  style: standard-http-status-codes
+  envelope: >-
+    JSON body. Reporting validation returns {"message": "..."}; the Audiences API
+    returns {"success": bool, "error": "..."}. See errors/vungle-error-codes.yml.
+idempotency:
+  supported: false
+  detail: >-
+    No idempotency-key header or idempotent-write contract is documented for the
+    Vungle/Liftoff APIs.
+pagination:
+  documented: false
+  detail: >-
+    No general cursor/offset pagination contract is documented; reporting results are
+    returned per report request bounded by start_time/end_time.
+cross_links:
+  authentication: authentication/vungle-authentication.yml
+  errors: errors/vungle-error-codes.yml
+  rate_limits: rate-limits/vungle-rate-limits.yml
+  lifecycle: lifecycle/vungle-lifecycle.yml
+  sandbox: sandbox/vungle-sandbox.yml

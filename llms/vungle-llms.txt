@@ -1,0 +1,34 @@
+# Vungle (Liftoff)
+
+> Vungle is a mobile app monetization and user-acquisition platform, now operated as part of Liftoff (the merged Liftoff + Vungle mobile growth company). Vungle's in-app advertising SDKs and Liftoff's advertiser APIs let mobile publishers monetize with performance ad formats and let advertisers run and report on user-acquisition campaigns programmatically. The programmatic API surface is documented at docs.liftoff.io and authenticates with an HTTP Basic API key + secret.
+
+## APIs
+
+- [Reporting API](https://docs.liftoff.io/advertiser/reporting_api): Automated access to campaign performance reports — impressions, clicks, installs, in-app events — with groupings, metrics, and cohort analysis. Base URL https://data.liftoff.io/api/v1.
+- [Campaign Management API (closed beta)](https://docs.liftoff.io/advertiser/campaign_management_api): Programmatically launch UA expansion campaigns, manage spend/targeting, upload assets, and assemble creatives. Base URL https://cm-api.liftoff.io/v1.
+- [Audiences Integration API](https://docs.liftoff.io/advertiser/direct/liftoff-api-audiences): Audience ingestion for partners working on behalf of multiple clients. Base URL https://analytics.liftoff.io/audiences/v1.
+- [GDPR Opt-Out API](https://docs.liftoff.io/advertiser/direct/liftoff-gdpr-opt-out-api): Submit GDPR-compliant opt-out requests to remove user data by device ID. POST https://analytics.liftoff.io/opt_out/v3.
+
+## Docs
+
+- [Liftoff Developer Docs](https://docs.liftoff.io/): Landing page for all programmatic integration methods.
+- [S2S Integration](https://docs.liftoff.io/advertiser/direct/liftoff-s2s-integration): Server-to-server postbacks to augment MMP attribution data for optimization.
+- [Liftoff Creatives](https://docs.liftoff.io/liftoff_creatives): Ad formats, creative guidelines, and interactive ad API integration.
+- [Authentication](https://docs.liftoff.io/advertiser/reporting_api): HTTP Basic with a Liftoff-issued API key and secret.
+
+## Artifacts
+
+- [Authentication profile](authentication/vungle-authentication.yml)
+- [API conventions](conventions/vungle-conventions.yml)
+- [Error codes](errors/vungle-error-codes.yml)
+- [Rate limits](rate-limits/vungle-rate-limits.yml)
+- [Lifecycle](lifecycle/vungle-lifecycle.yml)
+- [Sandbox / test modes](sandbox/vungle-sandbox.yml)
+- [Packages / SDKs](packages/vungle-packages.yml)
+- [Data model](data-model/vungle-data-model.yml)
+- [Webhooks / S2S](asyncapi/vungle-s2s-webhooks.yml)
+
+## SDKs
+
+- [VungleAds (iOS, CocoaPods)](https://cocoapods.org/pods/VungleAds)
+- [com.vungle:vungle-ads (Android, Maven Central)](https://central.sonatype.com/artifact/com.vungle/vungle-ads)

@@ -1,0 +1,37 @@
+generated: '2026-07-21'
+method: derived
+status: candidate
+source: https://docs.liftoff.io/advertiser/reporting_api
+note: >-
+  No official hosted/remote MCP server is published by Vungle/Liftoff. This is a
+  CANDIDATE tool list derived from the documented advertiser API endpoints, as a
+  starting point for an agent integration. Not an authoritative provider artifact.
+server:
+  name: vungle
+  transport: http
+  url: null
+tools:
+  - name: list_apps
+    description: List the apps associated with the account.
+    source_operation: GET https://data.liftoff.io/api/v1/apps
+  - name: list_creatives
+    description: List creatives associated with the account.
+    source_operation: GET https://data.liftoff.io/api/v1/creatives
+  - name: list_campaigns
+    description: List campaigns associated with the account.
+    source_operation: GET https://data.liftoff.io/api/v1/campaigns
+  - name: list_events
+    description: List in-app events associated with the account.
+    source_operation: GET https://data.liftoff.io/api/v1/events
+  - name: create_report
+    description: Create a campaign performance report over a time range with groupings and metrics.
+    source_operation: POST https://data.liftoff.io/api/v1/reports
+  - name: validate_report
+    description: Validate a report request without generating it (test=true).
+    source_operation: POST https://data.liftoff.io/api/v1/reports?test=true
+  - name: validate_api_key
+    description: Verify the validity of a Liftoff API key (Audiences API).
+    source_operation: GET https://analytics.liftoff.io/audiences/v1/{partner}/validate
+  - name: submit_gdpr_opt_out
+    description: Submit a GDPR opt-out request to remove user data by device IDs.
+    source_operation: POST https://analytics.liftoff.io/opt_out/v3/liftoff

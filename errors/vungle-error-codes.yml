@@ -1,0 +1,44 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.liftoff.io/advertiser/campaign_management_api
+format: http-status
+note: >-
+  Error semantics for the Vungle/Liftoff advertiser APIs. The Campaign Management API
+  publishes an explicit HTTP status-code table; the Reporting and Audiences APIs
+  return JSON error bodies. Captured verbatim from the public Liftoff docs.
+envelope:
+  reporting_validation: '{"message": "..."}'
+  audiences: '{"success": false, "error": "invalid API key"}'
+error_codes:
+  - code: 400
+    title: Bad Request
+    source: campaign_management_api
+  - code: 401
+    title: Missing or Invalid API Key
+    action: Check the API Key/Secret used for HTTP Basic authentication.
+    source: campaign_management_api
+  - code: 403
+    title: Access Denied
+    source: campaign_management_api
+  - code: 404
+    title: Not Found
+    source: campaign_management_api
+  - code: 429
+    title: Too Many Requests
+    action: Back off and retry; respect the documented per-method rate limit.
+    source: campaign_management_api
+  - code: 500
+    title: Server Error
+    source: campaign_management_api
+  - code: 503
+    title: Service Unavailable
+    source: campaign_management_api
+audiences_responses:
+  - status: 200
+    body: '{"success": true}'
+  - status: 401
+    body: '{"success": false, "error": "invalid API key"}'
+sources:
+  - https://docs.liftoff.io/advertiser/campaign_management_api
+  - https://docs.liftoff.io/advertiser/reporting_api
+  - https://docs.liftoff.io/advertiser/direct/liftoff-api-audiences

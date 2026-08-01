@@ -1,0 +1,53 @@
+generated: '2026-07-21'
+method: derived
+source: https://docs.liftoff.io/advertiser/campaign_management_api
+note: >-
+  Entity-relationship model derived from the documented Vungle/Liftoff advertiser
+  API endpoints (Campaign Management + Reporting). No OpenAPI is published, so
+  relationships are inferred from the documented URL structure and workflows.
+entities:
+  - name: app
+    endpoint: /apps
+    description: An app in the advertiser account; campaigns and events belong to an app.
+  - name: campaign
+    endpoint: /campaigns
+    id_field: campaignId
+    description: A user-acquisition (UA expansion) campaign targeting an app.
+  - name: creative
+    endpoint: /creatives
+    id_field: creativeId
+    description: An assembled ad creative built from uploaded assets, attached to campaigns.
+  - name: asset
+    endpoint: /assets
+    id_field: assetId
+    description: An uploaded media file (image or video) referenced when assembling creatives.
+  - name: event
+    endpoint: /apps/{appId}/events
+    description: An in-app event definition associated with an app.
+  - name: audience
+    endpoint: /audiences
+    description: A targeting audience available to campaigns.
+  - name: report
+    endpoint: /reports
+    description: A generated campaign performance report over a time range with groupings/metrics.
+relationships:
+  - from: campaign
+    to: app
+    type: belongs_to
+    via: appId
+  - from: campaign
+    to: creative
+    type: has_many
+    via: creativeId (attachment)
+  - from: creative
+    to: asset
+    type: has_many
+    via: assetId
+  - from: event
+    to: app
+    type: belongs_to
+    via: appId
+  - from: report
+    to: campaign
+    type: references
+    via: groupings/filters

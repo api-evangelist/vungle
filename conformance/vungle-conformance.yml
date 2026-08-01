@@ -1,0 +1,29 @@
+generated: '2026-07-21'
+method: derived
+source: https://docs.liftoff.io/
+note: >-
+  Cross-cutting standards conformance for the Vungle/Liftoff advertiser APIs,
+  derived from the documented auth model, transport, and error semantics.
+standards:
+  - id: rest-json
+    conforms: true
+    evidence: Standard REST patterns over HTTPS returning JSON (Campaign Management API docs).
+  - id: http-basic-auth
+    conforms: true
+    evidence: All advertiser APIs authenticate via HTTP Basic (ApiKey:ApiSecret).
+  - id: oauth2
+    conforms: false
+    evidence: No OAuth 2.0 authorization is documented.
+  - id: openid-connect
+    conforms: false
+  - id: rfc9457-problem-details
+    conforms: false
+    evidence: Errors use plain HTTP status codes with ad-hoc JSON bodies, not application/problem+json.
+  - id: gdpr
+    conforms: true
+    evidence: >-
+      Liftoff publishes a dedicated GDPR Opt-Out API for GDPR-compliant user-data
+      removal (opt_out/v3), and GDPR opt-out affordances in the audiences flow.
+  - id: openapi
+    conforms: false
+    evidence: No public OpenAPI/Swagger description is published (spec endpoints return 401/403/404).

@@ -1,0 +1,30 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.liftoff.io/advertiser/reporting_api
+note: >-
+  Test / validation affordances documented for the Vungle/Liftoff advertiser APIs.
+  These are validation modes rather than a separate sandbox host; no test API keys
+  or magic test values are published (credentials are issued by an Account Manager).
+test_modes:
+  - api: Reporting API
+    mechanism: query parameter
+    parameter: test=true
+    endpoint: POST https://data.liftoff.io/api/v1/reports?test=true
+    behavior: >-
+      Validates a report request without generating the report and without consuming
+      rate limit. On success returns {"message": "Validation passed without errors."}.
+  - api: GDPR Opt-Out API
+    mechanism: request body field
+    parameter: test (boolean, required)
+    endpoint: POST https://analytics.liftoff.io/opt_out/v3/liftoff
+    behavior: When true, marks the opt-out request as a test rather than a live removal.
+  - api: Campaign Management API
+    mechanism: hosted sandbox / API reference
+    detail: >-
+      The docs reference an "API Reference and Sandbox" for exploring endpoints; the
+      Campaign Management API is in closed beta and access is granted per customer.
+published_test_credentials: false
+sources:
+  - https://docs.liftoff.io/advertiser/reporting_api
+  - https://docs.liftoff.io/advertiser/direct/liftoff-gdpr-opt-out-api
+  - https://docs.liftoff.io/advertiser/campaign_management_api

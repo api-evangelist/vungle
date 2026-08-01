@@ -1,0 +1,28 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.liftoff.io/advertiser/direct/liftoff-s2s-integration
+spec_type: Webhooks
+note: >-
+  Vungle/Liftoff exposes a server-to-server (S2S) postback integration rather than a
+  published AsyncAPI document. Advertisers/MMPs send postbacks to Liftoff to augment
+  standard MMP attribution with additional optimization signals. This captures that
+  event/postback surface as a webhook catalog. No AsyncAPI spec is published.
+webhooks:
+  - name: mmp-postback
+    direction: inbound-to-liftoff
+    description: >-
+      Server-to-server postback sent from the advertiser/MMP to Liftoff on install and
+      upper-funnel engagements, matched to Liftoff clicks/impressions for optimization.
+    matching_identifiers:
+      - third_party_tracking_token
+      - mmp_tracker_device_id
+      - gaid
+      - idfa
+    docs: https://docs.liftoff.io/advertiser/direct/liftoff-s2s-integration
+  - name: self-attribution-postback
+    direction: inbound-to-liftoff
+    description: Self-attribution postback flow for advertisers not using a third-party MMP.
+    docs: https://docs.liftoff.io/advertiser/direct/self_attribution
+sources:
+  - https://docs.liftoff.io/advertiser/direct/liftoff-s2s-integration
+  - https://docs.liftoff.io/advertiser/direct/self_attribution

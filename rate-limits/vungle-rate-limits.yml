@@ -1,0 +1,26 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.liftoff.io/advertiser/campaign_management_api
+note: >-
+  Rate limits and resource quotas documented for the Vungle/Liftoff Campaign
+  Management API. The Reporting API does not publish a numeric rate limit but
+  recommends validating report requests with test=true to avoid hitting limits.
+rate_limits:
+  - api: Campaign Management API
+    scope: per REST method
+    limit_count: 1000
+    window: minute
+    description: 1,000 requests per minute per REST method.
+quotas:
+  - metric: Max campaigns enabled at one time
+    limit: 100
+  - metric: Max enabled creatives per campaign
+    limit: 100
+  - metric: Max creatives assembled daily
+    limit: 1500
+  - metric: Max assets uploaded daily
+    limit: 1500
+overrun_status: 429 Too Many Requests
+sources:
+  - https://docs.liftoff.io/advertiser/campaign_management_api
+  - https://docs.liftoff.io/advertiser/reporting_api

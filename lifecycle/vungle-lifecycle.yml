@@ -1,0 +1,38 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.liftoff.io/
+note: >-
+  API lifecycle posture for the Vungle/Liftoff advertiser APIs, from the public
+  Liftoff developer docs.
+versioning:
+  scheme: uri-path
+  current:
+    reporting_api: v1
+    campaign_management_api: v1
+    audiences_api: v1
+    gdpr_opt_out_api: v3
+  docs: https://docs.liftoff.io/
+maturity:
+  - api: Reporting API
+    status: generally-available
+  - api: Campaign Management API
+    status: closed-beta
+    detail: >-
+      Available to select customers; functionality and limits may evolve ahead of
+      general availability. Access granted via Account Manager.
+  - api: Audiences Integration API
+    status: generally-available
+    audience: partners acting on behalf of multiple clients
+  - api: GDPR Opt-Out API
+    status: generally-available
+data_freshness:
+  reporting_api: >-
+    Reports are continuously updated with a delay of several hours for some fields;
+    the latest full day's report is available by 5am the following day.
+deprecation:
+  policy_url: null
+  detail: No public deprecation/sunset policy (RFC 8594) is documented.
+status_page: null
+sources:
+  - https://docs.liftoff.io/advertiser/reporting_api
+  - https://docs.liftoff.io/advertiser/campaign_management_api
