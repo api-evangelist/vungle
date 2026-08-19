@@ -39,7 +39,7 @@ accessModel:
   generated: '2026-07-22'
   method: derived
 image: https://liftoff.ai/wp-content/uploads/2025/01/B-Meta-Image-20240912-122239.jpg
-specificationVersion: '0.20'
+specificationVersion: '0.23'
 created: '2026-07-17'
 modified: '2026-07-21'
 tags:
