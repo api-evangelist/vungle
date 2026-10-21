@@ -97,3 +97,86 @@
     year: '2011'
   status: not-a-workflow
   arazzo: null
+- slug: vungle-cocoapods-trunk
+  label: CocoaPods trunk
+  partner_name: CocoaPods trunk
+  category: iOS SDK (CocoaPods)
+  type: register
+  channel: package-registry
+  evidence: https://cocoapods.org/pods/Vungle-Advanced-Auction-SDK
+  source: edge
+  relationship: distribution-channel
+  contract_reference:
+    register: CocoaPods trunk (cdn.cocoapods.org Specs; github.com/CocoaPods/Specs)
+    spec_file: null
+    role: cocoapods-publisher
+    registered_name: Vungle
+    matched_domain: vungle.com
+    matched_by: domain
+    pods:
+    - pod: Vungle-Advanced-Auction-SDK
+      version: 1.2.0
+      homepage: http://www.vungle.com/
+      deprecated: false
+    - pod: VungleAds
+      version: 7.7.8
+      homepage: https://support.vungle.com/hc/en-us/articles/360002925791-Integrate-Vungle-SDK-for-iOS
+      deprecated: false
+    - pod: VungleAdvancedAuctionInMobiSDK
+      version: 7.1.1
+      homepage: https://www.vungle.com/
+      deprecated: false
+    - pod: VungleAdvancedAuctionMediationAdMob
+      version: 7.35.2.0
+      homepage: https://www.vungle.com/
+      deprecated: false
+    - pod: VungleAdvancedAuctionMediationAppLovin
+      version: 5.0.2.0
+      homepage: https://www.vungle.com/
+      deprecated: false
+    - pod: VungleAdvancedAuctionMediationChartboost
+      version: 7.3.0.0
+      homepage: https://www.vungle.com/
+      deprecated: false
+    - pod: VungleAdvancedAuctionMediationFacebook
+      version: 5.1.0.0
+      homepage: https://www.vungle.com/
+      deprecated: false
+    - pod: VungleAdvancedAuctionMediationInMobi
+      version: 7.1.1.0
+      homepage: https://www.vungle.com/
+      deprecated: false
+    - pod: VungleAdvancedAuctionMediationIronSource
+      version: 6.7.11.0
+      homepage: https://www.vungle.com/
+      deprecated: false
+    - pod: VungleAdvancedAuctionMediationMoPub
+      version: 5.3.0.0
+      homepage: https://www.vungle.com/
+      deprecated: false
+    - pod: VungleAdvancedAuctionMediationTapjoy
+      version: 12.1.0.0
+      homepage: https://www.vungle.com/
+      deprecated: false
+    - pod: VungleAdvancedAuctionMediationUnity
+      version: 2.3.0.0
+      homepage: https://www.vungle.com/
+      deprecated: false
+    signal_note: latest podspec homepage (domain) + authors (name); pods, versions and counts are context
+    detected_by: sweep-mobile-sdk-index.py
+    detected: '2026-10-21'
+  status: not-a-workflow
+  arazzo: null
+- slug: vungle-google-play-developer-google-play-sdk-index
+  label: Google Play Developer (Google Play SDK Index)
+  partner: google-play
+  partner_name: Google Play Developer (Google Play SDK Index)
+  category: mobile SDK (ads)
+  type: marketplace
+  marketplace: Google Play SDK Index
+  channel: partner-built
+  evidence: https://play.google.com/sdks/details/com-vungle-publisher-sdk-android
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
