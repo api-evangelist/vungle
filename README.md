@@ -64,6 +64,113 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Vungle is a company surfaced as a portfolio company of 500-global, gv, uncork-capital and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+Vungle is a mobile app monetization and user-acquisition platform, now operated as part of Liftoff (the merged Liftoff + Vungle mobile growth company). Vungle's in-app advertising SDKs help mobile publishers monetize with performance-focused ad formats (video, interactive, and playable ads), while Liftoff's advertiser APIs let growth teams launch and manage user-acquisition campaigns, assemble creatives, ingest audiences, and pull automated performance reporting. The programmatic surface is documented at docs.liftoff.io and includes a Reporting API, a closed-beta Campaign Management API, an Audiences Integration API, a GDPR Opt-Out API, and a server-to-server (S2S) postback integration. All advertiser APIs authenticate with an HTTP Basic API key and secret issued by a Liftoff Account Manager.
 
-Backed by: 500-global, gv, uncork-capital — https://vungle.com
+**Areas:** Company · Advertising · Mobile · Monetization · User Acquisition · AdTech · Analytics · Reporting
+
+## Vungle on APIs.io
+
+Everything profiled for Vungle is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/vungle/](https://apis.io/providers/vungle/)** — or go straight to one of the APIs or properties below.
+
+### APIs (4)
+
+- [Liftoff Reporting API](https://apis.io/apis/vungle/liftoff-reporting-api/) — Automated access to Vungle/Liftoff campaign performance reports — impressions, clicks, installs, and in-app events — with configurable groupings, metrics,…
+- [Liftoff Campaign Management API](https://apis.io/apis/vungle/liftoff-campaign-management-api/) — Closed-beta API to programmatically launch UA expansion campaigns, manage spend and targeting, upload assets, and assemble creatives. Standard REST/JSON at…
+- [Liftoff Audiences Integration API](https://apis.io/apis/vungle/liftoff-audiences-integration-api/) — Audience ingestion/validation API for partners working on behalf of multiple clients, at https://analytics.liftoff.io/audiences/v1.
+- [Liftoff GDPR Opt-Out API](https://apis.io/apis/vungle/liftoff-gdpr-opt-out-api/) — Submit GDPR-compliant opt-out requests to remove user data by device ID, at https://analytics.liftoff.io/opt_out/v3.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### AsyncAPI (1)
+
+Event-driven and webhook contracts.
+
+- [Vungle S2S Webhooks](https://apis.io/asyncapis/vungle/vungle-s2s-webhooks/)
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [vungle](https://apis.io/servers/vungle/vungle/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Vungle Authentication](https://apis.io/security/vungle/vungle-authentication/)
+- [Vungle Domain Security](https://apis.io/security/vungle/vungle-domain-security/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Vungle Rate Limits](https://apis.io/rate-limits/vungle/vungle-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://vungle.com)
+- [Documentation](https://docs.liftoff.io/)
+- [Getting started](https://docs.liftoff.io/advertiser)
+- [Blog](https://liftoff.io/blog)
+- [Terms of service](https://liftoff.io/terms-of-service)
+- [Privacy policy](https://liftoff.io/privacy-policy)
+- [GitHub](https://github.com/Vungle)
+
+## API Evangelist rating
+
+**Kin Score 39.8** — developing · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 78.6 |
+| Contract quality | 39.0 |
+| Contract governance | 4.5 |
+| Operational transparency | 31.6 |
+| Developer ergonomics | 59.5 |
+| Access clarity | 21.1 |
+
+**Agent readiness 25.2** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | documented (partial credit) |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | yes |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
+
+**Regulatory alignment 24.5** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/vungle/](https://apis.io/providers/vungle/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Vungle: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/vungle/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
